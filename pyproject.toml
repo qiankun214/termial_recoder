@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "term-recorder"
+version = "0.1.0"
+description = "Record interactive bash sessions (input and output) into JSON"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.scripts]
+tr_start = "termrec.cli:start_main"
+tr_end = "termrec.cli:end_main"
+
+[tool.setuptools]
+packages = ["termrec"]

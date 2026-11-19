@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+"""Development launcher for tr_end (works without installation).
+
+Inside a recorded session ``tr_end`` is normally provided by the bash function
+that the recorder injects through the environment; this executable is the
+fallback used when that function is not available.
+"""
+
+import os
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from termrec.cli import end_main
+
+if __name__ == "__main__":
+    raise SystemExit(end_main())
